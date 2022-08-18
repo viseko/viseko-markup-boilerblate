@@ -1,2 +1,9 @@
 /node_modules/
-/build/
+/dist/
+
+# Temporally while testing..
+*.png
+*.svg
+*.woff
+*.woff2
+*.docx
