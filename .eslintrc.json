@@ -137,12 +137,12 @@
     "padded-blocks": ["warn", "never"],
     "quotes": ["warn", "double"],
     "rest-spread-spacing": "warn", 
-    "semi": "warn",
+    // "semi": "warn",  <-- incompatible with Prettier
     "semi-spacing": "warn",
     "semi-style": "warn",
     "space-before-blocks": "warn",
     "space-in-parens": ["warn", "never"],
-    "space-infix-ops": "warn",
+    // "space-infix-ops": "warn",  <-- incompatible with Prettier
     "space-unary-ops": "warn",
     "switch-colon-spacing": "warn",
     "template-curly-spacing": "warn",
