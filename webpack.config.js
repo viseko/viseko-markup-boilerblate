@@ -5,8 +5,8 @@ const setLoaders = require("./webpack/loaders");
 
 // Config constants
 const mode = process.env.NODE_ENV || "development";
-const isDev = (mode === "development");
-const isProd = (mode === "production");
+const isDev = mode === "development";
+const isProd = mode === "production";
 
 // Project paths
 const paths = {
@@ -15,12 +15,12 @@ const paths = {
   src: {
     js: path.resolve(__dirname, "src/js/index.js"),
     pages: {
-      index: path.resolve(__dirname, "src/pug/index.pug")
-    }
+      index: path.resolve(__dirname, "src/pug/index.pug"),
+    },
   },
   build: {
-    js: path.resolve(__dirname, "dist/js")
-  }
+    js: path.resolve(__dirname, "dist/js"),
+  },
 };
 
 // Environment data for modules
@@ -28,7 +28,7 @@ const env = {
   mode,
   isDev,
   isProd,
-  paths
+  paths,
 };
 
 // Helper functions
@@ -43,18 +43,18 @@ module.exports = {
     path: paths.buildFolder,
     publicPath: "/",
     filename: setOutputFilename(),
-    clean: true
+    clean: true,
   },
   plugins: setPlugins(env),
   module: {
-    rules: setLoaders(env)
+    rules: setLoaders(env),
   },
   devServer: {
     port: 8080,
     hot: true,
     static: {
-      directory: paths.srcFolder
-    }
+      directory: paths.srcFolder,
+    },
   },
-  stats: "errors-warnings"
+  stats: "errors-warnings",
 };
