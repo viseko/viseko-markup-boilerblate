@@ -8,6 +8,16 @@
   "extends": [
     "eslint:recommended"
   ],
+  "plugins": [
+    "babel",
+    "import",
+    "prettier"
+  ],
+  "ignorePatterns":[
+    "/.git",
+    "/.vscode",
+    "node_modules"
+  ],
   "overrides": [],  
   "parserOptions": {
       "ecmaVersion": "latest",
@@ -54,7 +64,7 @@
     "no-implicit-coercion": "warn",
     "no-lone-blocks": "error",
     "no-loop-func": "error",
-    "no-mixed-operators": "warn",
+    // "no-mixed-operators": "warn", <-- incompatible with Prettier
     "no-multi-assign": "warn",
     "no-multi-str": "warn",
     "no-nested-ternary": "error",
@@ -93,7 +103,7 @@
     // Layout & Formatting
     "array-bracket-newline": ["warn", "consistent"],
     "array-bracket-spacing": "warn",
-    "arrow-parens": ["warn", "as-needed"],
+    // "arrow-parens": ["warn", "as-needed"], <-- incompatible with Prettier
     "arrow-spacing": "warn",
     "block-spacing": "warn",
     "brace-style": "warn",
@@ -110,21 +120,23 @@
     "key-spacing": "warn",
     "keyword-spacing": "warn",
     "lines-around-comment": ["warn", { "beforeLineComment": true, "allowBlockStart": true }],
-    "max-len": ["warn", { "ignoreUrls": true, "ignoreTemplateLiterals": true, "ignoreRegExpLiterals": true }],
+    "max-len": ["warn", 100, 2, { "ignoreUrls": true, "ignoreTemplateLiterals": true, "ignoreRegExpLiterals": true }],
     "new-parens": "error",
     "newline-per-chained-call": "warn",
+    "no-alert": "error",
+    "no-console": "error",
     "no-multi-spaces": "warn",
     "no-multiple-empty-lines": ["warn", { "max": 1 }],
     "no-tabs": "warn",
     "no-trailing-spaces": "warn",
     "no-whitespace-before-property": "warn",
     "nonblock-statement-body-position": "warn",
-    "object-curly-newline": ["warn", "always"],
+    // "object-curly-newline": ["warn", "always"], <-- incompatible with Prettier
     "object-property-newline": "warn",
     "operator-linebreak": ["warn", "after"],
     "padded-blocks": ["warn", "never"],
     "quotes": ["warn", "double"],
-    "rest-spread-spacing": "warn",
+    "rest-spread-spacing": "warn", 
     "semi": "warn",
     "semi-spacing": "warn",
     "semi-style": "warn",
@@ -136,6 +148,8 @@
     "template-curly-spacing": "warn",
     "template-tag-spacing": "warn",
     "wrap-iife": ["warn", "outside"],
-    "yield-star-spacing": ["warn", "after"]
+    "yield-star-spacing": ["warn", "after"],
+    // Prettier
+    "prettier/prettier": "warn"
   }
 }
