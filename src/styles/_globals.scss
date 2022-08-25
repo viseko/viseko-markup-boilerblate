@@ -1,0 +1,23 @@
+body {
+  background-color: #cccccc;
+  color: #333333;
+}
+
+// Коммент
+h1,
+h2 {
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.bar {
+  color: red;
+
+  .baz {
+    color: blue;
+
+    &:hover {
+      color: silver;
+    }
+  }
+}
