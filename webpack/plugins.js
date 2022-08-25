@@ -1,4 +1,5 @@
 const PugPlugin = require("pug-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 const StyleLintPlugin = require("stylelint-webpack-plugin");
 
 module.exports = () => {
@@ -8,6 +9,10 @@ module.exports = () => {
       extractCss: {
         filename: "styles/[name].[contenthash:8].css",
       },
+    }),
+    new ESLintPlugin({
+      failOnError: false,
+      quiet: true,
     }),
     new StyleLintPlugin({
       configFile: ".stylelintrc.json",
