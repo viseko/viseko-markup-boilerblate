@@ -1,6 +1,6 @@
-const PugPlugin = require("pug-plugin");
+import PugPlugin from "pug-plugin";
 
-module.exports = () => {
+export default () => {
   const loaders = [
     // PUG-Files
     {
@@ -26,7 +26,7 @@ module.exports = () => {
       generator: {
         filename: "[name][ext]",
         outputPath: (pathData) =>
-          pathData.filename.split("/").slice(1, -1).join("/"),
+          pathData.filename.split("/").slice(1, -1).join("/"), // <-- "img/<subfolders>"
       },
     },
   ];

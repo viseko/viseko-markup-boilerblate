@@ -1,19 +1,24 @@
-const PugPlugin = require("pug-plugin");
-const ESLintPlugin = require("eslint-webpack-plugin");
-const StyleLintPlugin = require("stylelint-webpack-plugin");
+import ESLintPlugin from "eslint-webpack-plugin";
+import PugPlugin from "pug-plugin";
+import StyleLintPlugin from "stylelint-webpack-plugin";
 
-module.exports = () => {
+export default () => {
   const plugins = [
+    // Pug
     new PugPlugin({
       pretty: true,
       extractCss: {
         filename: "styles/[name].[contenthash:8].css",
       },
     }),
+
+    // ESLint
     new ESLintPlugin({
       failOnError: false,
       quiet: true,
     }),
+
+    // Stylelint
     new StyleLintPlugin({
       configFile: ".stylelintrc.json",
       context: "src",

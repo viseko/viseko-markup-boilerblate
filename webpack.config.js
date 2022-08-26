@@ -1,7 +1,9 @@
-// Basic imports
-const path = require("path");
-const setPlugins = require("./webpack/plugins");
-const setLoaders = require("./webpack/loaders");
+// Basic importsfrom
+import path from "path";
+import setLoaders from "./webpack/loaders.js";
+import setPlugins from "./webpack/plugins.js";
+
+const __dirname = path.resolve();
 
 // Config constants
 const mode = process.env.NODE_ENV || "development";
@@ -37,7 +39,7 @@ const setOutputFilename = () => {
 };
 
 // Webpack configs
-module.exports = {
+const webpackConfig = {
   entry: paths.src.pages,
   output: {
     path: paths.buildFolder,
@@ -58,3 +60,5 @@ module.exports = {
   },
   stats: "errors-warnings",
 };
+
+export default webpackConfig;
