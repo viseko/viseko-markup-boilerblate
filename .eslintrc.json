@@ -18,7 +18,6 @@
     "/.vscode",
     "node_modules"
   ],
-  "overrides": [],  
   "parserOptions": {
       "ecmaVersion": "latest",
       "sourceType": "module"
@@ -50,7 +49,7 @@
     "max-depth": ["error", 4],
     "max-nested-callbacks": ["error", 4],
     "max-params": ["warn", 3],
-    "multiline-comment-style": "warn",
+    "multiline-comment-style": "off",
     "no-array-constructor": "error",
     "no-caller": "error",
     "no-confusing-arrow": "error",
@@ -107,11 +106,11 @@
     "arrow-spacing": "warn",
     "block-spacing": "warn",
     "brace-style": "warn",
-    "comma-dangle": ["warn", {"functions": "never", "objects": "always", "arrays": "always-multiline"}],
+    "comma-dangle": ["warn", {"functions": "never", "objects": "always-multiline", "arrays": "always-multiline"}],
     "comma-spacing": "warn",
     "comma-style": "warn",
     "computed-property-spacing": "warn",
-    "dot-location": "warn",
+    "dot-location": "off",
     "eol-last": "warn",
     "func-call-spacing": "warn",
     "implicit-arrow-linebreak": "off",
