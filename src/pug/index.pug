@@ -2,12 +2,28 @@ extends common/layout.pug
 
 block body
   h1 Viseko Markup Boilerplate
+  p Здесь однажды будет вёрстка крутого сайта, а пока вот так
+  hr
   p Lol kek cheburek
+  hr
   p Another lol kek cheburek
 
-  img(src=require("../img/fold1/anything.png"), alt="")
-  img(src=require("../img/fold1/cloth.png"), alt="")
-  img(src=require("../img/fold2/gift.png"), alt="")
-  img(src=require("../img/docs.png"), alt="")
+  figure 
+    picture 
+      source(
+        srcset=require("@img/maxresdefault.webp")
+        type="image/webp"
+      )
+      img(
+        src=require("@img/maxresdefault.jpg"),
+        alt="Картинка"
+        width="300"
+        height="200"
+        )
+    figcaption IMG
+
+  figure 
+    .css-pic
+    figcaption CSS
   
-  .some-block
+
