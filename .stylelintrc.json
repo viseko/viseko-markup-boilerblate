@@ -7,7 +7,7 @@
     "stylelint-scss",
     "stylelint-order"
   ],
-  "ignoreFiles": ["./public/icons/*.css"],
+  "ignoreFiles": ["./public/icons/*.css", "./dist/**/*.css"],
   "rules": {
     "scss/at-rule-no-unknown": true,
     "annotation-no-unknown": true,
