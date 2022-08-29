@@ -95,7 +95,7 @@
     "prefer-spread": "warn",
     "prefer-template": "warn",
     "require-await": "error",
-    "sort-imports": "warn",
+    "sort-imports": "off",
     "spaced-comment": ["warn", "always", {"exceptions": ["-", "=", "+"]}],
     "symbol-description": "warn",
     "yoda": ["error", "never"],
