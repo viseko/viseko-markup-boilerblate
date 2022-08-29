@@ -1,6 +1,6 @@
 import gulp from "gulp";
-import images from "./gulp/tasks/images.js";
-import pathes from "./gulp/config/path.js";
+import images from "./config/gulp/tasks/images.js";
+import pathes from "./config/gulp/config/path.js";
 
 // Tasks import
 global.app = {

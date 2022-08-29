@@ -1,7 +1,7 @@
 // Basic importsfrom
 import path from "path";
-import setLoaders from "./webpack/loaders.js";
-import setPlugins from "./webpack/plugins.js";
+import setLoaders from "./config/webpack/loaders.js";
+import setPlugins from "./config/webpack/plugins.js";
 
 const __dirname = path.resolve();
 
