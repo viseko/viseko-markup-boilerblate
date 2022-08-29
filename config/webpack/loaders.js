@@ -29,6 +29,16 @@ export default () => {
           pathData.filename.split("/").slice(1, -1).join("/"), // <-- "img/<subfolders>"
       },
     },
+
+    // Fonts
+    {
+      test: /.(woff|woff2)$/,
+      type: "asset/resource",
+      generator: {
+        filename: "[name][ext]",
+        outputPath: "fonts",
+      },
+    },
   ];
 
   return loaders;
