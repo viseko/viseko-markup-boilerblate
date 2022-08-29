@@ -6,6 +6,7 @@ import pathes from "./config/gulp/config/path.js";
 // Tasks
 import images from "./config/gulp/tasks/images.js";
 import icons from "./config/gulp/tasks/icons.js";
+import fonts from "./config/gulp/tasks/fonts.js";
 
 // Tasks import
 global.app = {
@@ -13,8 +14,8 @@ global.app = {
   pathes,
 };
 
-const prepareImages = gulp.parallel(images, icons);
+const prepareSources = gulp.parallel(images, icons, fonts);
 
-export { icons, images };
+export { icons, images, fonts };
 
-export default prepareImages;
+export default prepareSources;

@@ -12,10 +12,13 @@ const pathes = {
   src: {
     img: `${srcFolder}/img/`,
     icons: `${srcFolder}/icons/`,
+    fonts: `${srcFolder}/fonts/`,
+    styles: `${srcFolder}/styles/`,
   },
   public: {
     img: `${publicFolder}/img/`,
     icons: `${publicFolder}/icons/`,
+    fonts: `${publicFolder}/fonts/`,
   },
 };
 
