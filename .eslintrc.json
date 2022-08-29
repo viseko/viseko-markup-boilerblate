@@ -22,6 +22,14 @@
       "ecmaVersion": "latest",
       "sourceType": "module"
   },
+  "overrides": [
+    {
+      "files": ["./config/**/*.js"],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ],
   "rules": { 
     // Possible problems
     "array-callback-return": "warn",
