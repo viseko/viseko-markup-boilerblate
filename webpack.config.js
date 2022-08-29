@@ -47,6 +47,11 @@ const webpackConfig = {
     filename: setOutputFilename(),
     clean: true,
   },
+  resolve: {
+    alias: {
+      "@img": path.resolve(__dirname, "public/img"),
+    },
+  },
   plugins: setPlugins(env),
   module: {
     rules: setLoaders(env),

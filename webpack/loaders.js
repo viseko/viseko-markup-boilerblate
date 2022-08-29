@@ -21,7 +21,7 @@ export default () => {
 
     // Images
     {
-      test: /\.(png|jpg|svg|gif)$/,
+      test: /\.(png|jpg|svg|gif|webp)$/,
       type: "asset/resource",
       generator: {
         filename: "[name][ext]",
