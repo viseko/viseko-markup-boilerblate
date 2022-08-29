@@ -96,7 +96,7 @@
     "operator-assignment": "warn",
     "prefer-arrow-callback": "warn",
     "prefer-const": "error",
-    "prefer-destructuring": "warn",
+    "prefer-destructuring": "off",
     "prefer-exponentiation-operator": "error",
     "prefer-object-spread": "warn",
     "prefer-rest-params": "warn",
