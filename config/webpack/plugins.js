@@ -1,8 +1,9 @@
 import ESLintPlugin from "eslint-webpack-plugin";
 import PugPlugin from "pug-plugin";
 import StyleLintPlugin from "stylelint-webpack-plugin";
+import CopyPlugin from "copy-webpack-plugin";
 
-export default () => {
+export default (env) => {
   const plugins = [
     // Pug
     new PugPlugin({
@@ -26,6 +27,24 @@ export default () => {
       fix: true,
       failOnError: false,
       quiet: true,
+    }),
+
+    // Copy files
+    new CopyPlugin({
+      patterns: [
+        {
+          from: `${env.paths.publicFolder}/files`,
+          to: `${env.paths.buildFolder}/files`,
+        },
+        {
+          from: `${env.paths.publicFolder}\\manifest.json`,
+          to: `${env.paths.buildFolder}`,
+        },
+        {
+          from: `${env.paths.publicFolder}\\google-touch-icon.png`,
+          to: `${env.paths.buildFolder}`,
+        },
+      ],
     }),
   ];
 

@@ -39,6 +39,16 @@ export default () => {
         outputPath: "fonts",
       },
     },
+
+    // Files
+    {
+      test: /^files\//,
+      type: "asset/resource",
+      generator: {
+        filename: "[name][ext]",
+        outputPath: "files",
+      },
+    },
   ];
 
   return loaders;

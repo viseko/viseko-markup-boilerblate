@@ -14,6 +14,7 @@ const isProd = mode === "production";
 const paths = {
   srcFolder: path.resolve(__dirname, "src"),
   buildFolder: path.resolve(__dirname, "dist"),
+  publicFolder: path.resolve(__dirname, "public"),
   src: {
     js: path.resolve(__dirname, "src/js/index.js"),
     pages: {
@@ -55,6 +56,7 @@ const webpackConfig = {
       "@js": path.resolve(__dirname, "src/js"),
       "@styles": path.resolve(__dirname, "src/styles"),
       "@fonts": path.resolve(__dirname, "public/fonts"),
+      "@files": path.resolve(__dirname, "public/files"),
     },
   },
   plugins: setPlugins(env),
@@ -64,9 +66,14 @@ const webpackConfig = {
   devServer: {
     port: 8080,
     hot: true,
-    static: {
-      directory: paths.srcFolder,
-    },
+    static: [
+      {
+        directory: paths.publicFolder,
+      },
+      {
+        directory: paths.srcFolder,
+      },
+    ],
   },
   stats: "errors-warnings",
 };
