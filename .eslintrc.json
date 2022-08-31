@@ -16,7 +16,8 @@
   "ignorePatterns":[
     "/.git",
     "/.vscode",
-    "node_modules"
+    "node_modules",
+    "dist"
   ],
   "parserOptions": {
       "ecmaVersion": "latest",
@@ -27,6 +28,12 @@
       "files": ["./config/**/*.js"],
       "rules": {
         "no-console": "off"
+      }
+    },
+    {
+      "files": ["./config/gulp/config/manifest-data.js"],
+      "rules": {
+        "camelcase": "off"
       }
     }
   ],
@@ -126,7 +133,7 @@
     "jsx-quotes": "warn",
     "key-spacing": "warn",
     "keyword-spacing": "warn",
-    "lines-around-comment": ["warn", { "beforeLineComment": true, "allowBlockStart": true, "allowArrayStart": true, "allowClassStart": true }],
+    "lines-around-comment": ["warn", { "beforeLineComment": true, "allowBlockStart": true, "allowArrayStart": true, "allowClassStart": true, "allowObjectStart": true }],
     "max-len": ["warn", 100, 2, { "ignoreUrls": true, "ignoreTemplateLiterals": true, "ignoreRegExpLiterals": true }],
     "new-parens": "error",
     "newline-per-chained-call": "off",
