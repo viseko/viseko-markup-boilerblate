@@ -3,7 +3,7 @@ import imagemin from "gulp-imagemin";
 import webp from "gulp-webp";
 
 const images = () => {
-  // JPG/PNG - оптимизация
+  // JPG/PNG optimization
   app.gulp
     .src(`${app.pathes.src.img}**/*.{jpg,jpeg,png,gif,webp,svg,ico}`)
     .pipe(
@@ -16,7 +16,7 @@ const images = () => {
     )
     .pipe(app.gulp.dest(app.pathes.public.img));
 
-  // JPG/PNG - преобразование в webp
+  // Converting to webp
   return app.gulp
     .src(`${app.pathes.src.img}**/*.{jpg,jpeg,png}`)
     .pipe(
@@ -29,7 +29,7 @@ const images = () => {
     )
     .pipe(app.gulp.dest(app.pathes.public.img));
 
-  // Очистка папки src/img <--- пока не делаем
+  // src/icons folder shouldn't be cleared
 };
 
 export default images;

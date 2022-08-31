@@ -48,7 +48,7 @@ const createPngSprite = (packNames) => {
   });
 };
 
-const iconsSvg = async (cb) => {
+const icons = async () => {
   const srcDir = path.resolve(app.pathes.root, app.pathes.src.icons);
   const dirnames = await getDirectories(srcDir);
   const svgPacks = [];
@@ -84,4 +84,4 @@ const iconsSvg = async (cb) => {
   await createPngSprite(pngPacks);
 };
 
-export default iconsSvg;
+export default icons;
