@@ -35,7 +35,7 @@ const env = {
 
 // Helper functions
 const setOutputFilename = () => {
-  return isDev ? "[name].js" : "[name].[contenthash].js";
+  return isDev ? "[name].js" : "[name].[contenthash:8].js";
 };
 
 // Webpack configs
@@ -49,6 +49,7 @@ const webpackConfig = {
   },
   resolve: {
     alias: {
+      "@public": path.resolve(__dirname, "public"),
       "@img": path.resolve(__dirname, "public/img"),
       "@icons": path.resolve(__dirname, "public/icons/"),
       "@js": path.resolve(__dirname, "src/js"),

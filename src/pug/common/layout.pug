@@ -12,7 +12,16 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="theme-color" content="#ffffff")
 
+    //- Favicons
+    link(rel="icon", href=require("@public/favicon.svg"))
+    link(rel="icon", href=require("@public/mask-icon.svg"), color="#000000")
+    link(rel="apple-touch-icon", href=require("@public/apple-touch-icon.png"))
+
+    //- Manifest
+    link(rel="manifest", href="manifest.json")
+    
     //- Styles
     link(rel="stylesheet", href=require("@styles/index.scss"))
     block styles
@@ -21,4 +30,5 @@ html(lang="en")
     title Document
   body
     block body
+
     script(src=require("@js/index.js")) 

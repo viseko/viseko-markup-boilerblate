@@ -7,6 +7,8 @@ import pathes from "./config/gulp/config/pathes.js";
 import images from "./config/gulp/tasks/images.js";
 import icons from "./config/gulp/tasks/icons.js";
 import fonts from "./config/gulp/tasks/fonts.js";
+import favicon from "./config/gulp/tasks/favicon.js";
+import build from "./config/gulp/tasks/build.js";
 
 // Common variables
 global.app = {
@@ -15,8 +17,8 @@ global.app = {
 };
 
 // Main task
-const prepareSources = gulp.parallel(images, icons, fonts);
+const prepareSources = gulp.parallel(images, icons, fonts, favicon);
 export default prepareSources;
 
 // Atomic tasks
-export { icons, images, fonts };
+export { icons, images, fonts, favicon, build };
