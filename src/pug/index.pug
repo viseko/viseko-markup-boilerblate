@@ -4,26 +4,12 @@ block body
   h1 Viseko Markup Boilerplate
   p Здесь однажды будет вёрстка крутого сайта, а пока вот так
   hr
-  p Lol kek cheburek
-  hr
-  p Another lol kek cheburek
-
-  figure 
-    picture 
-      source(
-        srcset=require("@img/maxresdefault.webp")
-        type="image/webp"
-      )
-      img(
-        src=require("@img/maxresdefault.jpg"),
-        alt="Картинка"
-        width="300"
-        height="200"
-        )
-    figcaption IMG
-
-  figure 
-    .css-pic
-    figcaption CSS
+  
+  h2 SVG-icons
+  +svgIcon("fold", "Vector", 40, 40)
+  +svgIcon("fold", "cut", 40, 40)
+  +svgIcon("fold", "copy", 40, 40)
+  +svgIcon("fold", "link", 40, 40)
+  
   
 

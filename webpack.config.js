@@ -50,6 +50,7 @@ const webpackConfig = {
   resolve: {
     alias: {
       "@img": path.resolve(__dirname, "public/img"),
+      "@icons": path.resolve(__dirname, "public/icons/"),
       "@js": path.resolve(__dirname, "src/js"),
       "@styles": path.resolve(__dirname, "src/styles"),
       "@fonts": path.resolve(__dirname, "public/fonts"),
